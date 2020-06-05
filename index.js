@@ -13,12 +13,19 @@ app.get("/", (req, res) => {
   let response = {
     title: "Next-Gen CMS",
     text: [
-      { attr: "para1", content: "THis is the first paragraph" },
-      { attr: "para2", content: "thIS is the second paragraph" },
+      { id: "para1", content: "THis is the first paragraph" },
+      { id: "para2", content: "thIS is the second paragraph" },
+      { id: "para3", content: "Road to dynamism" },
+      { id: "multi", content: "Testing If Multiple Attributes Work!" },
     ],
     attributes: [
-      { attr: "title", value: "This element has a dynamic title" },
-      { attr: "href", value: "This is a dynamic link" },
+      {
+        id: "attr1",
+        attribute: "title",
+        value: "This element has a dynamic title",
+      },
+      { id: "attr2", attribute: "href", value: "/dynamic" },
+      { id: "multi-attr1", attribute: "style", value: "color: red;" },
     ],
   };
   res.status(200).json(response);

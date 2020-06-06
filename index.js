@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
       { id: "para1", content: "THis is the first paragraph" },
       { id: "para2", content: "thIS is the second paragraph" },
       { id: "para3", content: "Road to dynamism" },
-      { id: "multi", content: "Testing If Multiple Attributes Work!" },
+      { id: "multi", content: "Testing If Multiple Attributes Work?" },
     ],
     attributes: [
       {
@@ -26,6 +26,8 @@ app.get("/", (req, res) => {
       },
       { id: "attr2", attribute: "href", value: "/dynamic" },
       { id: "multi-attr1", attribute: "style", value: "color: red;" },
+      { id: "attr5", attribute: "target", value: "_blank" },
+      { id: "attr6", attribute: "style", value: "font-size: 44px;" },
     ],
   };
   res.status(200).json(response);

@@ -12,6 +12,10 @@ app.use(express.json());
 app.get("/", (req, res) => {
   let response = {
     title: "Next-Gen CMS",
+    meta: [
+      { name: "keyword", content: "Cocoa, CMS, Next-Gen" },
+      { name: "description", content: "Cocoa, the CMS for the future!" },
+    ],
     text: [
       { id: "para1", content: "THis is the first paragraph" },
       { id: "para2", content: "thIS is the second paragraph" },
@@ -35,6 +39,11 @@ app.get("/", (req, res) => {
         id: "img1",
         src: "https://via.placeholder.com/150x150.png",
         alt: "Dynamic Image",
+      },
+      {
+        id: "img2",
+        src: "https://via.placeholder.com/200x200.png",
+        alt: "Another Dynamic Image",
       },
     ],
   };

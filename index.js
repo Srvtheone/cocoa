@@ -9,13 +9,11 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (req, res) => {
   let response = {
     title: "Next-Gen CMS",
-    meta: [
-      { name: "keyword", content: "Cocoa, CMS, Next-Gen" },
-      { name: "description", content: "Cocoa, the CMS for the future!" },
-    ],
     text: [
       { id: "para1", content: "THis is the first paragraph" },
       { id: "para2", content: "thIS is the second paragraph" },
@@ -48,6 +46,11 @@ app.get("/", (req, res) => {
     ],
   };
   res.status(200).json(response);
+});
+
+app.post("/contact", (req, res) => {
+  console.log(req.body);
+  res.status(200).send("Form Submitted");
 });
 
 app.listen(PORT, () => {

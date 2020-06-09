@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMS Test</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <script type="module" src="../lib/index.js" defer></script>
   </head>
   <body>
@@ -11,10 +17,22 @@
     <p cocoa-text="para2">...</p>
     <h4 cocoa-attr="attr1">Hover Over Me</h4>
     <a href="#" cocoa-text="para3" cocoa-attr="attr2 attr5 attr6"></a>
-    <hr />
     <p cocoa-text="multi" cocoa-attr="attr1   multi-attr1 ">...</p>
     <img cocoa-img="img1" />
     <div cocoa-text="imgtxt1">---</div>
     <img cocoa-img="img2" />
+    <hr />
+    <form cocoa-form="form1">
+      <label for="name">Name:</label>
+      <input name="name" type="text" placeholder="Enter Name" />
+      <br />
+      <label for="email">Email:</label>
+      <input name="email" type="text" placeholder="Enter Email" />
+      <br />
+      <label for="password">Email:</label>
+      <input name="password" type="password" placeholder="Enter Email" />
+      <br />
+      <input type="submit" value="Send To Cocoa!" />
+    </form>
   </body>
 </html>

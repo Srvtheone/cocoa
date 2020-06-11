@@ -13,6 +13,19 @@
     <script type="module" src="../lib/index.js" defer></script>
   </head>
   <body>
+    <div>
+      <h4>Checking If Nested Elements Work!</h4>
+      <div id="text11" cocoa-text="nested1">
+        Blah 1
+        <div cocoa-text="nested2">
+          Blah 2
+          <div cocoa-text="para1">
+            ...
+            <div cocoa-text="para2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <p cocoa-text="para1">...</p>
     <p cocoa-text="para2">...</p>
     <h4 cocoa-attr="attr1">Hover Over Me</h4>
@@ -20,7 +33,6 @@
     <p cocoa-text="multi" cocoa-attr="attr1   multi-attr1 ">...</p>
     <img cocoa-img="img1" />
     <div cocoa-text="imgtxt1">---</div>
-    <img cocoa-img="img2" />
     <hr />
     <form cocoa-form="form1">
       <label for="name">Name:</label>
@@ -29,10 +41,17 @@
       <label for="email">Email:</label>
       <input name="email" type="text" placeholder="Enter Email" />
       <br />
-      <label for="password">Email:</label>
-      <input name="password" type="password" placeholder="Enter Email" />
+      <label for="password" cocoa-text="frm1">Email:</label>
+      <input name="password" type="password" cocoa-attr="ph1" />
       <br />
       <input type="submit" value="Send To Cocoa!" />
+      <hr />
+      <h3>Dynamic List</h3>
+      <ul>
+        <li cocoa-list="list1">Blah!</li>
+      </ul>
     </form>
+
+    </div>
   </body>
 </html>

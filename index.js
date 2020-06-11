@@ -20,6 +20,9 @@ app.get("/", (req, res) => {
       { id: "para3", content: "Road to dynamism" },
       { id: "multi", content: "Testing If Multiple Attributes Work?" },
       { id: "imgtxt1", content: "The image above is dynamic too!" },
+      { id: "frm1", content: "Password:" },
+      { id: "nested1", content: "Parent Element" },
+      { id: "nested2", content: "Child Element" },
     ],
     attributes: [
       {
@@ -30,7 +33,8 @@ app.get("/", (req, res) => {
       { id: "attr2", attribute: "href", value: "/dynamic" },
       { id: "multi-attr1", attribute: "style", value: "color: red;" },
       { id: "attr5", attribute: "target", value: "_blank" },
-      { id: "attr6", attribute: "style", value: "font-size: 44px;" },
+      { id: "attr6", attribute: "style", value: "font-size: 34px;" },
+      { id: "ph1", attribute: "placeholder", value: "Enter Password" },
     ],
     images: [
       {
@@ -38,10 +42,16 @@ app.get("/", (req, res) => {
         src: "https://via.placeholder.com/150x150.png",
         alt: "Dynamic Image",
       },
+    ],
+    list: [
       {
-        id: "img2",
-        src: "https://via.placeholder.com/200x200.png",
-        alt: "Another Dynamic Image",
+        id: "list1",
+        length: 6,
+        items: [
+          {
+            id: 1,
+          },
+        ],
       },
     ],
   };
@@ -50,7 +60,9 @@ app.get("/", (req, res) => {
 
 app.post("/contact", (req, res) => {
   console.log(req.body);
-  res.status(200).send("Form Submitted");
+  setTimeout(() => {
+    res.status(200).send("Form Submitted");
+  }, 1000);
 });
 
 app.listen(PORT, () => {
